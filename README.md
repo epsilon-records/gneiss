@@ -6,7 +6,7 @@ Part of **[Epsilon Audio](https://github.com/natehouk/epsilon-plugins)**, a fami
 
 ![Gneiss](screenshot.png)
 
-Gneiss is a clean-room design with the feature set of FabFilter Pro-C 3 (2025). Gneiss 1.x matched the original Pro-C (2007, 1.10). Version 2.0 adds:
+Gneiss is a compressor with many styles, detailed timing and gain controls and a sidechain EQ. Version 2.0 adds:
 - 14 styles, including upward, TTM, vari-mu and El-Op
 - lookahead, hold, range and a gain-change mix up to 200%
 - auto threshold and auto release
@@ -16,7 +16,7 @@ Gneiss is a clean-room design with the feature set of FabFilter Pro-C 3 (2025). 
 - MIDI and tempo triggering
 - loudness metering
 
-It was written from scratch, working only from FabFilter's public product pages and press releases. No FabFilter code, binaries, presets, artwork or trademarks were used.
+It was written from scratch; no third-party code, presets or artwork are included.
 
 It is part of a family of plugins:
 - [Monolith](https://github.com/natehouk/monolith) (synth)
@@ -123,28 +123,7 @@ xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/*/Gneiss*
 
 ![Help window](screenshot-help.png)
 
-### Compared with FabFilter Pro-C 3 (2025)
-
-| Pro-C 3 | Gneiss |
-|---|---|
-| 14 compression styles, including Upward, TTM, Vari-Mu and El-Op | ✓ |
-| Threshold, ratio up to Inf:1, knee, attack, release, hold, range, lookahead | ✓ |
-| Auto gain, auto threshold, auto release | ✓ |
-| Gain-change mix up to 200%, dry/wet | ✓ |
-| Character modes (warm, punchy, vintage), pre or post | ✓ |
-| Oversampling up to 32x | ✓ (linear phase) |
-| Stereo, mid/side and cross-channel modes, stereo link | ✓ |
-| Sidechain EQ with up to 6 bands, external sidechain | ✓ |
-| Sidechain and gain-change audition | ✓ |
-| MIDI triggering | ✓ (note velocity) |
-| Level display, transfer curve, meters, loudness metering | ✓ |
-| MIDI Learn, undo/redo, A/B, help hints | ✓ |
-| Resizable interface | ✓ (resizes freely) |
-| Instance List | Not supported (needs instances to talk to each other) |
-| Surround and Dolby Atmos | Not supported (stereo only) |
-| AAX, AudioSuite | Not supported (needs Avid's SDK and signing) |
-| iPad (AUv3) | Not supported |
-| — | Extra: a tempo-synced pulse trigger |
+Not supported: Instance List; Surround and Dolby Atmos; AAX, AudioSuite; iPad (AUv3).
 
 ## Build from source
 
@@ -204,7 +183,7 @@ New parameters, styles and presets are only ever appended, so saved sessions and
 ## Changelog
 
 - **2.1:** the preset browser searches names and categories as you type, and keeps Favourites.
-- **2.0:** Brings Gneiss up to Pro-C 3. New in this version:
+- **2.0:** New in this version:
   - Eleven new styles, including Upward, TTM, Vari-Mu and El-Op.
   - Hold, range, gain-change mix up to 200%, and lookahead.
   - Auto threshold and auto release.
@@ -225,5 +204,3 @@ New parameters, styles and presets are only ever appended, so saved sessions and
 ## License
 
 [MIT](LICENSE). Built with [DPF](https://github.com/DISTRHO/DPF) and its bundled NanoVG, which are under the ISC license. `plugins/Gneiss/ResizeHandle.hpp` comes from DPF's examples and keeps its ISC notice.
-
-"FabFilter", "FabFilter Pro-C" and "Pro-C 3" are trademarks of FabFilter Software Instruments. Gneiss is not affiliated with or endorsed by FabFilter.
